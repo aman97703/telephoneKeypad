@@ -96,6 +96,20 @@ for (var i = 0; i < keys.length; ++i) {
     };
 
     // onmouseUp
+    if('ontouchstart' in document.body){
+        btn[i].ontouchstart = function (e) {
+            clearTimeout(hold);
+            busy = true;
+            is_busy = setTimeout(function () {
+                change = -1;
+                busy = false;
+                e.target = null;
+            }, delay);
+            // put caret at the end of text input
+            input.focus();
+            input.selectionStart = input.selectionEnd = input.value.length;
+        };
+    }
     btn[i].onmouseup = function (e) {
         clearTimeout(hold);
         busy = true;
