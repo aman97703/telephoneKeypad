@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    background-color: #45455d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container h1{
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    color: white;
+    text-shadow: 10px 7px 6px #232222;
+    text-align: center;
+}
+
+.outer {
+    background: linear-gradient(63deg, #635e5e, #ffffff59);
+    height: 420px;
+    width: 317px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.inputDiv {
+    height: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputDiv input {
+    width: 90%;
+    border: 1px solid black;
+    height: 70%;
+    background: white;
+    cursor: text;
+    font-size: 1.5rem;
+    color: black;
+    padding: 10px;
+}
+
+.keyboardDiv {
+    height: 85%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.keyOutLayer {
+    width: 80%;
+    height: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    row-gap: 1rem;
+    column-gap: 1rem;
+}
+small {
+    font-size: .8rem;
+}
+button.btn {
+    background: linear-gradient(58deg, #4b7cb3, #fff);
+    outline: none;
+    border: none;
+    border-radius: 90% 49% 38% 76%/93% 98% 51% 60%;
+    font-size: 1.3rem;
+    font-weight: 500;
+    box-shadow: -3px 4px 6px 1px #504f4f, -2px -2px 3px 0px #504f4f;
+    cursor: pointer;
+}
+
+@media (max-width:600px) {
+    .container h1{
+        font-size: 2.8rem;
+    }
+    .outer{
+        height: 63%;
+        width: 320px;
+    }
+}
+@media (max-width:430px) {
+    .outer{
+        height: 63%;
+        width: 90%;
+    }
+}
