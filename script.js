@@ -94,13 +94,7 @@ for (var i = 0; i < keys.length; ++i) {
         } else {
             change = change + 1;
         }
-        // if (text[0] === '#') {
-        //     input.value = input.value.slice(0, -1);
-        //     hold = setTimeout(function () {
-        //         input.value = "";
-        //     }, delay);
-        //     return;
-        // }
+        
         hold = setTimeout(function () {
             input.value = input.value.slice(0, -1) + number;
         }, delay);
