@@ -5,57 +5,69 @@ const btn = document.getElementsByClassName('btn');
 // all keys and their textvalue
 const keys = [{
         val: "1",
-        smallVal: ".,!"
+        smallVal: ".,!",
+        dataText : ".,!"
     },
     {
         val: "2",
-        smallVal: "abc"
+        smallVal: "abc",
+        dataText : "abc2"
     },
     {
         val: "3",
-        smallVal: "def"
+        smallVal: "def",
+        dataText : "def3"
     },
     {
         val: "4",
-        smallVal: "ghi"
+        smallVal: "ghi",
+        dataText : "gfi4"
     },
     {
         val: "5",
-        smallVal: "jkl"
+        smallVal: "jkl",
+        dataText : "jkl5"
     },
     {
         val: "6",
-        smallVal: "mno"
+        smallVal: "mno",
+        dataText: "mno6"
     },
     {
         val: "7",
-        smallVal: "pqrs"
+        smallVal: "pqrs",
+        dataText: "pqrs7",
     },
     {
         val: "8",
-        smallVal: "tuv"
+        smallVal: "tuv",
+        dataText: "tuv8"
     },
     {
         val: "9",
-        smallVal: "wxyz"
+        smallVal: "wxyz",
+        dataText: "wxyz9",
     },
     {
         val: "*",
-        smallVal: ""
+        smallVal: "+",
+        dataText: "+*"
     },
     {
         val: 0,
-        smallVal: "   "
+        smallVal: "__",
+        dataText: " 0"
     },
     {
         val: "#",
-        smallVal: ""
+        smallVal: "",
+        dataText: "#"
     },
 ]
 
 // set the button in in frontend
 keys.forEach((value, i) => {
-    keyOutLayer.innerHTML += `<button data-text="${value.smallVal}" class="btn" id="btn${i}" data-number="${value.val}"> ${value.val} <small>${value.smallVal}</small></button>`
+    keyOutLayer.innerHTML += `<button data-text="${value.dataText}" class="btn" id="btn${i}" data-number="${value.val}"> ${value.val} <small>${value.smallVal}</small></button>`
 })
 
 // logic of buttons
@@ -82,13 +94,13 @@ for (var i = 0; i < keys.length; ++i) {
         } else {
             change = change + 1;
         }
-        if (text[0] === '#') {
-            input.value = input.value.slice(0, -1);
-            hold = setTimeout(function () {
-                input.value = "";
-            }, delay);
-            return;
-        }
+        // if (text[0] === '#') {
+        //     input.value = input.value.slice(0, -1);
+        //     hold = setTimeout(function () {
+        //         input.value = "";
+        //     }, delay);
+        //     return;
+        // }
         hold = setTimeout(function () {
             input.value = input.value.slice(0, -1) + number;
         }, delay);
